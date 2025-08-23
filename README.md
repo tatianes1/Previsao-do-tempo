@@ -8,5 +8,5 @@ Exibição de temperatura, clima, umidade e vento
 
 Interface minimalista e responsiva
 
-Atualizações automáticas via API
+Atualizações automáticas via Weather API
 
