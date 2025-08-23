@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/scripts.js" defer></script>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <title>⛅ Previsão do Tempo</title>
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <h3>Confira o clima de uma cidade</h3>
+
+      <div class="form-input-container">
+        <input type="text" placeholder="Digite o nome da cidade" id="city-input" />
+        <button id="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <!-- Caixa de erro -->
+      <div id="error-message" class="hidden">
+        ❌ Cidade não encontrada. Verifique o nome e tente novamente.
+      </div>
+      <!-- Fim da caixa de erro -->
+    </div>
+
+    <div id="weather-data" class="hide">
+      <h2>
+        <i class="fa-solid fa-location-dot"></i>
+        <span id="city"></span>
+        <span id="state"></span> <!-- Nome do estado -->
+        <img id="country" src="" alt="Bandeira do país" />
+      </h2>
+
+      <p id="temperature">
+        <span></span>&deg;C 
+        <span id="period-icon"></span>
+      </p>
+
+      <div id="description-container">
+        <p id="description"></p>
+        <img src="" alt="Condições do Tempo" id="weather-icon" />
+      </div>
+
+      <div id="details-container">
+        <div class="detail-item">
+          <i class="fa-solid fa-droplet"></i>
+          <span id="humidity"></span>
+        </div>
+
+        <div class="detail-item">
+          <i class="fa-solid fa-wind"></i>
+          <span id="wind"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

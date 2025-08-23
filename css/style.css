@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, rgba(89, 76, 238, 1) 0%, #bfc9cf 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-image 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.hide, .hidden {
+  display: none;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  color: #1f1c1c;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Formulário */
+.form h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-input-container {
+  display: flex;
+  gap: 8px;
+}
+
+.form input {
+  padding: 0.8rem;
+  border: none;
+  flex: 1;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #131212;
+  backdrop-filter: blur(4px);
+}
+
+.form input::placeholder {
+  color: #eee;
+}
+
+.form button {
+  padding: 0.8rem;
+  min-width: 50px;
+  background-color: rgba(141, 208, 244, 0.6);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: rgba(141, 208, 244, 0.8);
+}
+
+/* Dados do clima */
+#weather-data {
+  border-top: 1px solid #fff;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+#weather-data h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+#weather-data h2 i {
+  font-size: 1rem;
+}
+
+#weather-data span {
+  margin: 0.6rem;
+}
+
+#country {
+  height: 15px;
+}
+
+#description-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.6rem 0;
+  gap: 0.5rem;
+}
+
+#description {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#details-container .detail-item {
+  border-right: 1px solid #fff;
+  margin: 0 0.6rem;
+  padding: 0.6rem;
+}
+
+#details-container .detail-item:last-child {
+  border-right: none;
+}
+
+#period-icon {
+  margin-left: 8px;
+  font-size: 1.5rem;
+}
+
+#error-message {
+  background-color: #ffcccc;
+  color: #a10000;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border: 1px solid #a10000;
+  border-radius: 8px;
+  font-weight: bold;
+  max-width: 100%;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* 🔥 Responsivo */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  #details-container {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-input-container {
+    flex-direction: column;
+  }
+
+  .form input,
+  .form button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .form button {
+    margin-top: 0.8rem;
+  }
+
+  #details-container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #weather-data h2 {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
